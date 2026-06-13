@@ -7,7 +7,7 @@
 - 전체 진행률 (모든 트랙 체크 합산)
 - 트랙별 카드 (담당자·주차별 진행률)
 - 주차별 진행 테이블 / 진행 추이 차트
-- 레포 상세 페이지 (PRD / Task / Workflow / Changelog 탭)
+- 레포 상세 페이지 (PRD / Task / Workflow / Changelog 탭) — 작업이 있는 첫 주차가 기본으로 열림
 
 > 이 레포는 [project-dashboard 스킬](skills/project-dashboard/project-dashboard.md)로 생성·관리됩니다.
 > 데이터 수정/동기화는 `/project-dashboard` 스킬 명령(`status`, `config`, `edit`, `sync`)을 사용하세요.
@@ -69,6 +69,8 @@ npm run build
 | `devpath-sandbox-svc` | sandbox |
 | `devpath-frontend` | frontend |
 | `devpath-gitops` | team-lead |
+
+> 현재 `data/`에는 [17_스케줄](https://github.com/DevPathAi/documents/blob/main/17_스케줄.md) 기반 **W1~W24 작업 약 110개**가 9개 트랙에 시드되어 있습니다. 전부 계획 상태(진행률 0%)이며, 실제 진척은 각 서비스가 작업하며 `sync`로 갱신합니다.
 
 전체 데이터 계약은 [skills/project-dashboard/references/data-schema.md](skills/project-dashboard/references/data-schema.md) 참고.
 
