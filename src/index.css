@@ -17,4 +17,14 @@
   --color-danger: #dc2626;
   --color-amber: #f59e0b;
   --color-amber-light: #fbbf24;
+
+  /*
+   * 폰트 — index.html에서 Plus Jakarta Sans / Geist Mono를 로드하지만
+   * @theme 매핑이 없어 적용되지 않고 있었다(시스템 폰트로 폴백). 여기서 연결한다.
+   * 한글 문자는 Jakarta에 없으므로 system-ui 등 OS 한글 폰트로 자연 폴백한다.
+   */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 }
