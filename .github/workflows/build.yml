@@ -36,7 +36,9 @@ jobs:
           node-version: 24
           cache: npm
 
-      - run: npm ci
+      # npm ci 대신 install — Windows에서 생성한 lock의 크로스플랫폼
+      # 옵셔널 의존성(@emnapi/* 등) 불일치를 Linux 러너에서 갱신 허용.
+      - run: npm install --no-audit --no-fund
       - run: npm run lint
       - run: npm run validate:data
       - run: npm run build
