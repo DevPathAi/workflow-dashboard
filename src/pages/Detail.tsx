@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { useRepoData } from '../hooks/useData'
 import { useConfig } from '../hooks/useConfig'
@@ -22,10 +22,19 @@ export default function Detail() {
   const { config } = useConfig()
   const columns = config?.columns || DEFAULT_COLUMNS
 
-  const [selectedWeek, setSelectedWeek] = useState(config?.periods?.[0]?.id || 'W1')
+  const [weekOverride, setWeekOverride] = useState<string | null>(null)
   const [selectedStep, setSelectedStep] = useState<Step | null>(null)
   const [selectedTrackIdx, setSelectedTrackIdx] = useState(0)
   const [activeTab, setActiveTab] = useState<'detail' | 'changelog'>('detail')
+  // 작업(totalChecks>0)이 있는 첫 주차를 기본값으로 한다.
+  // 사용자가 주차 탭을 직접 누르면 그 선택(weekOverride)이 우선한다.
+  const defaultWeek = useMemo(() => {
+    for (const p of config?.periods || []) {
+      if (data?.tracks.some(t => t.weeks.some(w => w.week === p.id && w.totalChecks > 0))) return p.id
+    }
+    return config?.periods?.[0]?.id || 'W1'
+  }, [data, config])
+  const selectedWeek = weekOverride ?? defaultWeek
 
   if (loading) return <div className="p-8 text-stone-400">Loading...</div>
   if (!data) return <div className="p-8 text-stone-400">레포를 찾을 수 없습니다</div>
@@ -86,7 +95,7 @@ export default function Detail() {
               ))}
             </div>
           )}
-          <WeekTabs selected={selectedWeek} onChange={w => { setSelectedWeek(w); setSelectedStep(null) }} />
+          <WeekTabs selected={selectedWeek} onChange={w => { setWeekOverride(w); setSelectedStep(null) }} />
           <div className={`grid grid-cols-1 lg:grid-cols-${columns.length} min-h-[400px]`}>
             {columns.map(col => (
               <ColumnRenderer
