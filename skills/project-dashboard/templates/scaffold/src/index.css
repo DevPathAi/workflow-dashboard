@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/*
+ * 시맨틱 컬러 토큰 — 컴포넌트에서 text-info/bg-success/border-danger,
+ * text-amber/text-amber-light 등으로 사용한다. Tailwind 4는 @theme에
+ * 정의가 없으면 해당 유틸을 생성하지 않으므로(미정의 시 색 누락) 여기서 선언한다.
+ *   info    파랑   — 액션/링크          (hover:bg-blue-600 와 정렬)
+ *   success 초록   — 완료/정상
+ *   warning 주황   — 진행 중/주의
+ *   danger  빨강   — 위험/파괴적 액션    (border-red-200 와 정렬)
+ *   amber / amber-light — 브랜드(다크 헤더 위에서 밝게)
+ */
+@theme {
+  --color-info: #2563eb;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-amber: #f59e0b;
+  --color-amber-light: #fbbf24;
+}
