@@ -4,8 +4,110 @@
   "tracks": [
     {
       "name": "sandbox",
-      "owner": "TBD",
-      "weeks": []
+      "owner": "Backend",
+      "weeks": [
+        {
+          "week": "W10",
+          "period": "08-17~08-21",
+          "steps": [
+            {
+              "name": "Sandbox Runner 기반",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "Sandbox Runner 기반",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "Docker 컨테이너 풀(Java21/Node20/Python3.12)",
+                      "done": false
+                    },
+                    {
+                      "text": "gVisor(runsc) 런타임",
+                      "done": false
+                    },
+                    {
+                      "text": "리소스 제한(CPU·MEM·30s·네트워크 차단)",
+                      "done": false
+                    },
+                    {
+                      "text": "sandbox_sessions + 실행 로그 SSE",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        },
+        {
+          "week": "W11",
+          "period": "08-24~08-28",
+          "steps": [
+            {
+              "name": "제출 처리",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "제출 처리",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "테스트 러너 결과 파싱",
+                      "done": false
+                    },
+                    {
+                      "text": "SandboxRunSubmittedEvent",
+                      "done": false
+                    },
+                    {
+                      "text": "힌트 3단계",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 3,
+          "doneChecks": 0
+        },
+        {
+          "week": "W22",
+          "period": "11-09~11-13",
+          "steps": [
+            {
+              "name": "Sandbox pentest",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "Sandbox pentest",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "격리 탈출 시도 자동 테스트",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 1,
+          "doneChecks": 0
+        }
+      ]
     }
   ],
   "prd": [],

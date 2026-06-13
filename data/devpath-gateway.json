@@ -4,8 +4,44 @@
   "tracks": [
     {
       "name": "gateway",
-      "owner": "TBD",
-      "weeks": []
+      "owner": "Backend",
+      "weeks": [
+        {
+          "week": "W2",
+          "period": "06-22~06-26",
+          "steps": [
+            {
+              "name": "API Gateway 엣지",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "API Gateway 엣지",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "Gateway 라우팅 골격",
+                      "done": false
+                    },
+                    {
+                      "text": "JWT 검증 엣지",
+                      "done": false
+                    },
+                    {
+                      "text": "OAuth2 로그인 연계",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 3,
+          "doneChecks": 0
+        }
+      ]
     }
   ],
   "prd": [],

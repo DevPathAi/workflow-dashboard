@@ -4,8 +4,145 @@
   "tracks": [
     {
       "name": "ai",
-      "owner": "TBD",
-      "weeks": []
+      "owner": "AI",
+      "weeks": [
+        {
+          "week": "W6",
+          "period": "07-20~07-24",
+          "steps": [
+            {
+              "name": "Claude 클라이언트",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "Claude 클라이언트",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "Claude API 클라이언트(Sonnet 4.6)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 1,
+          "doneChecks": 0
+        },
+        {
+          "week": "W12",
+          "period": "08-31~09-04",
+          "steps": [
+            {
+              "name": "AI 코드 리뷰 + 시드",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "AI 코드 리뷰 + 시드",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "프롬프트 인젝션 방어(입력 필터 + system 방어 + 탈옥 방지)",
+                      "done": false
+                    },
+                    {
+                      "text": "코드 리뷰 프롬프트 + 골든 50 케이스",
+                      "done": false
+                    },
+                    {
+                      "text": "ai_code_reviews 비동기 처리",
+                      "done": false
+                    },
+                    {
+                      "text": "유사 질문 탐지(pgvector 0.80)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        },
+        {
+          "week": "W20",
+          "period": "10-26~10-30",
+          "steps": [
+            {
+              "name": "정체 탐지",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "정체 탐지",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "정체 탐지 AI(Claude 난이도 재조정 제안)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 1,
+          "doneChecks": 0
+        },
+        {
+          "week": "W21",
+          "period": "11-02~11-06",
+          "steps": [
+            {
+              "name": "FinOps",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "FinOps",
+                  "total": 5,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "ai_cost_logs + Grafana 대시보드",
+                      "done": false
+                    },
+                    {
+                      "text": "Semantic Cache(Redis TTL 7일)",
+                      "done": false
+                    },
+                    {
+                      "text": "3계층 Kill-switch",
+                      "done": false
+                    },
+                    {
+                      "text": "사용량 한도 가드",
+                      "done": false
+                    },
+                    {
+                      "text": "2 Aha 퍼널 대시보드",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 5,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 5,
+          "doneChecks": 0
+        }
+      ]
     }
   ],
   "prd": [],

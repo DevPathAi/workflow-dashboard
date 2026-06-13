@@ -4,8 +4,48 @@
   "tracks": [
     {
       "name": "shared",
-      "owner": "TBD",
-      "weeks": []
+      "owner": "Backend",
+      "weeks": [
+        {
+          "week": "W1",
+          "period": "06-15~06-19",
+          "steps": [
+            {
+              "name": "인프라 부트스트랩",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "인프라 부트스트랩",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "모노리포 + Gradle 멀티프로젝트",
+                      "done": false
+                    },
+                    {
+                      "text": "Docker Compose 로컬 환경",
+                      "done": false
+                    },
+                    {
+                      "text": "Flyway 초기 스키마",
+                      "done": false
+                    },
+                    {
+                      "text": "공유 이벤트 스키마(DomainEvent·Outbox)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        }
+      ]
     }
   ],
   "prd": [],

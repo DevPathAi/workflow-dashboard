@@ -4,8 +4,223 @@
   "tracks": [
     {
       "name": "learning",
-      "owner": "TBD",
-      "weeks": []
+      "owner": "Backend",
+      "weeks": [
+        {
+          "week": "W5",
+          "period": "07-13~07-17",
+          "steps": [
+            {
+              "name": "진단 테스트",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "진단 테스트",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "question_bank + Bloom 태깅",
+                      "done": false
+                    },
+                    {
+                      "text": "적응형 진단 알고리즘(난이도 ±)",
+                      "done": false
+                    },
+                    {
+                      "text": "비회원 진단 세션(Redis 30분)",
+                      "done": false
+                    },
+                    {
+                      "text": "결과 → 회원 이관 플로우",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        },
+        {
+          "week": "W6",
+          "period": "07-20~07-24",
+          "steps": [
+            {
+              "name": "Learning Path Engine",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "Learning Path Engine",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "Path 생성 프롬프트 v1 + 버전 관리",
+                      "done": false
+                    },
+                    {
+                      "text": "JSON strict 응답 파싱",
+                      "done": false
+                    },
+                    {
+                      "text": "LearningPathGeneratedEvent",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 3,
+          "doneChecks": 0
+        },
+        {
+          "week": "W7",
+          "period": "07-27~07-31",
+          "steps": [
+            {
+              "name": "pgvector 매칭",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "pgvector 매칭",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "콘텐츠 임베딩 파이프라인(text-embedding-3-small)",
+                      "done": false
+                    },
+                    {
+                      "text": "HNSW 인덱스",
+                      "done": false
+                    },
+                    {
+                      "text": "target_skills → 콘텐츠 매칭 로직",
+                      "done": false
+                    },
+                    {
+                      "text": "path_milestones + path_weekly_tasks",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        },
+        {
+          "week": "W8",
+          "period": "08-03~08-07",
+          "steps": [
+            {
+              "name": "1st Aha 백엔드",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "1st Aha 백엔드",
+                  "total": 2,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "SSE 진행 스트리밍(4단계)",
+                      "done": false
+                    },
+                    {
+                      "text": "\"왜 이 순서인가\" rationale",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 0
+        },
+        {
+          "week": "W9",
+          "period": "08-10~08-14",
+          "steps": [
+            {
+              "name": "콘텐츠 진척",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "콘텐츠 진척",
+                  "total": 2,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "진척 자동 추적(스크롤 + 체류)",
+                      "done": false
+                    },
+                    {
+                      "text": "다음 콘텐츠 추천",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 0
+        },
+        {
+          "week": "W17",
+          "period": "10-05~10-09",
+          "steps": [
+            {
+              "name": "AI 멘토",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "AI 멘토",
+                  "total": 4,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "ai_mentor_sessions + context_snapshot",
+                      "done": false
+                    },
+                    {
+                      "text": "현재 콘텐츠 + 최근 5 Sandbox 자동 주입",
+                      "done": false
+                    },
+                    {
+                      "text": "SSE 스트리밍",
+                      "done": false
+                    },
+                    {
+                      "text": "참고 자료 링크",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 4,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 4,
+          "doneChecks": 0
+        }
+      ]
     }
   ],
   "prd": [],
