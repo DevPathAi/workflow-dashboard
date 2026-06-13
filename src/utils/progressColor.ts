@@ -13,7 +13,7 @@ export function progressText(p: number): string {
   if (p >= 60) return 'text-info'
   if (p >= 30) return 'text-warning'
   if (p > 0) return 'text-danger'
-  return 'text-stone-400'
+  return 'text-stone-500' // 0%(미시작): 대비 ~4.6:1 확보 (stone-400은 ~2.2:1로 미달)
 }
 
 export function progressBg(p: number): string {
