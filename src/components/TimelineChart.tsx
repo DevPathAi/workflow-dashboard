@@ -70,6 +70,20 @@ export default function TimelineChart({ data }: Props) {
     }))
   )
 
+  if (allDates.length === 0) {
+    return (
+      <div className="bg-white rounded-xl p-4 shadow-sm">
+        <h3 className="text-sm font-semibold text-stone-600 mb-2">진행률 추이</h3>
+        <div className="h-[250px] flex items-center justify-center text-center px-4">
+          <p className="text-sm text-stone-500">
+            아직 진척 데이터가 없습니다.<br />
+            작업이 진행되면 주차별 추이가 여기에 표시됩니다.
+          </p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="bg-white rounded-xl p-4 shadow-sm">
       <h3 className="text-sm font-semibold text-stone-600 mb-2">진행률 추이</h3>

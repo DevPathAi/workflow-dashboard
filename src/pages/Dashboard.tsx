@@ -20,6 +20,13 @@ export default function Dashboard() {
     <div className="min-h-screen bg-stone-50">
       <Header overallPercent={overallPercent} />
 
+      {overallPercent === 0 && (
+        <div className="mx-6 mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          아직 시작 전입니다 — 모든 트랙이 계획 단계로 진행률 0%입니다.
+          각 서비스가 작업을 진행하고 <code className="bg-amber-100 px-1 rounded">sync</code>로 갱신하면 수치가 채워집니다.
+        </div>
+      )}
+
       <div className="px-6 py-4">
         <h2 className="text-sm font-semibold text-stone-600 mb-2">트랙별 현황</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
