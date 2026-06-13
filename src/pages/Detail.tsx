@@ -37,7 +37,21 @@ export default function Detail() {
   const selectedWeek = weekOverride ?? defaultWeek
 
   if (loading) return <div className="p-8 text-stone-400">Loading...</div>
-  if (!data) return <div className="p-8 text-stone-400">레포를 찾을 수 없습니다</div>
+  if (!data) {
+    return (
+      <div className="min-h-screen bg-stone-50">
+        <Header overallPercent={0} subtitle={repo} backLink="#/" />
+        <div className="flex flex-col items-center justify-center gap-3 py-24 text-center px-6">
+          <p className="text-base font-semibold text-stone-700">레포를 찾을 수 없습니다</p>
+          <p className="text-sm text-stone-500">
+            <code className="bg-stone-100 px-1 rounded">{repo}</code> 에 해당하는 데이터가 없습니다.
+            주소가 올바른지 확인하거나 대시보드에서 다시 선택하세요.
+          </p>
+          <a href="#/" className="mt-2 text-sm px-4 py-2 bg-info text-white rounded-md">← 대시보드로 돌아가기</a>
+        </div>
+      </div>
+    )
+  }
 
   const hasMultipleTracks = data.tracks.length > 1
   const track = data.tracks[selectedTrackIdx] || data.tracks[0]
