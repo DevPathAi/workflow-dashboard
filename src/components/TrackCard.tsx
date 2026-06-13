@@ -6,9 +6,10 @@ interface TrackCardProps {
   repoData: RepoData
   trackName: string
   owner: string
+  color: string
 }
 
-export default function TrackCard({ repoData, trackName, owner }: TrackCardProps) {
+export default function TrackCard({ repoData, trackName, owner, color }: TrackCardProps) {
   const navigate = useNavigate()
   const track = repoData.tracks.find(t => t.name === trackName)
   const isCombined = !track && repoData.tracks.length > 0
@@ -44,7 +45,10 @@ export default function TrackCard({ repoData, trackName, owner }: TrackCardProps
       <div className={`text-3xl font-bold font-display ${!hasData ? 'text-stone-500' : progressText(percent)}`}>
         {percent}%
       </div>
-      <div className="text-xs font-semibold text-stone-700 mt-1">{trackName}</div>
+      <div className="flex items-center justify-center gap-1.5 mt-1">
+        <span className="inline-block w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: color }} />
+        <span className="text-xs font-semibold text-stone-700">{trackName}</span>
+      </div>
       <div className="text-xs text-stone-500">{owner}</div>
       <div className="mt-2 h-1.5 bg-stone-200 rounded-full overflow-hidden">
         <div

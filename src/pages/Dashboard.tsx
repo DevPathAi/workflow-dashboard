@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import TrackCard from '../components/TrackCard'
 import ProgressTable from '../components/ProgressTable'
 import TimelineChart from '../components/TimelineChart'
+import { getTrackColor } from '../utils/trackColor'
 
 export default function Dashboard() {
   const { data, loading, overallPercent } = useData()
@@ -30,8 +31,8 @@ export default function Dashboard() {
       <div className="px-6 py-4">
         <h2 className="text-sm font-semibold text-stone-600 mb-2">트랙별 현황</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {trackEntries.map(e => (
-            <TrackCard key={e.trackName} {...e} />
+          {trackEntries.map((e, i) => (
+            <TrackCard key={e.trackName} {...e} color={getTrackColor(e.trackName, i)} />
           ))}
         </div>
       </div>
