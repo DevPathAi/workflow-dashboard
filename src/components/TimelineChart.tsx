@@ -5,20 +5,9 @@ import {
   Title, Tooltip, Legend, Filler,
 } from 'chart.js'
 import type { RepoData } from '../types'
+import { getTrackColor } from '../utils/trackColor'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
-
-const AUTO_COLORS = ['#D97706', '#0D9488', '#6366F1', '#EC4899', '#0EA5E9', '#8B5CF6', '#F97316', '#06B6D4', '#84CC16', '#E879F9', '#14B8A6', '#F43F5E']
-
-function getTrackColor(trackName: string, index: number): string {
-  if (index < AUTO_COLORS.length) return AUTO_COLORS[index]
-  let hash = 0
-  for (let i = 0; i < trackName.length; i++) {
-    hash = ((hash << 5) - hash) + trackName.charCodeAt(i)
-    hash |= 0
-  }
-  return AUTO_COLORS[Math.abs(hash) % AUTO_COLORS.length]
-}
 
 interface Props {
   data: RepoData[]
@@ -69,6 +58,20 @@ export default function TimelineChart({ data }: Props) {
       borderWidth: 2,
     }))
   )
+
+  if (allDates.length === 0) {
+    return (
+      <div className="bg-white rounded-xl p-4 shadow-sm">
+        <h3 className="text-sm font-semibold text-stone-600 mb-2">진행률 추이</h3>
+        <div className="h-[250px] flex items-center justify-center text-center px-4">
+          <p className="text-sm text-stone-500">
+            아직 진척 데이터가 없습니다.<br />
+            작업이 진행되면 주차별 추이가 여기에 표시됩니다.
+          </p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-white rounded-xl p-4 shadow-sm">

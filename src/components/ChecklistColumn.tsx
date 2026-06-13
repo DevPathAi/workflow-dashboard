@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Step, Phase } from '../types'
+import { progressBg } from '../utils/progressColor'
 
 interface Props {
   label: string
@@ -77,11 +78,16 @@ export default function ChecklistColumn({ label, steps, selectedStep, onSelectSt
           <button
             key={step.name}
             onClick={() => onSelectStep(step)}
-            className={`w-full text-left p-2 rounded mb-1 border-l-2 ${style.bg} hover:shadow-sm transition-shadow`}
+            className={`w-full text-left p-2.5 rounded mb-1 border border-stone-200 ${style.bg} hover:shadow-sm transition-shadow`}
           >
-            <div className="flex justify-between items-center">
-              <span className="text-xs font-medium">{step.name}</span>
-              <span className={`text-[10px] font-mono ${style.text}`}>{pct}%</span>
+            <div className="flex justify-between items-center gap-2">
+              <span className="text-xs font-medium truncate">{step.name}</span>
+              <span className={`text-[11px] font-mono shrink-0 ${style.text}`}>
+                {step.doneChecks}/{step.totalChecks} · {pct}%
+              </span>
+            </div>
+            <div className="mt-1.5 h-1 bg-stone-100 rounded-full overflow-hidden">
+              <div className={`h-full rounded-full ${progressBg(pct)}`} style={{ width: `${pct}%` }} />
             </div>
           </button>
         )
