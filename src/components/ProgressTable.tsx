@@ -33,28 +33,30 @@ export default function ProgressTable({ data }: Props) {
   return (
     <div className="bg-white rounded-xl p-4 shadow-sm">
       <h3 className="text-sm font-semibold text-stone-600 mb-2">주차별 상세</h3>
-      <table className="w-full text-xs">
-        <thead>
-          <tr className="bg-amber-light">
-            <th className="p-1.5 text-left border-b-2 border-amber text-[10px]">트랙</th>
-            {weeks.map(w => <th key={w} className="p-1.5 text-center border-b-2 border-amber text-[10px]">{w}</th>)}
-            <th className="p-1.5 text-center border-b-2 border-amber text-[10px] font-bold">합계</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r, i) => (
-            <tr key={i} className="border-b border-stone-100">
-              <td className="p-1.5">{r.name}</td>
-              {r.weeks.map((w, j) => (
-                <td key={j} className={`text-center ${w !== null ? percentColor(w) : 'text-stone-300'}`}>
-                  {w !== null ? `${w}%` : '—'}
-                </td>
-              ))}
-              <td className="text-center font-bold">{r.total}%</td>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[680px] text-xs">
+          <thead>
+            <tr className="bg-amber-light">
+              <th className="p-1.5 text-left border-b-2 border-amber text-[10px] sticky left-0 bg-amber-light">트랙</th>
+              {weeks.map(w => <th key={w} className="p-1.5 text-center border-b-2 border-amber text-[10px] whitespace-nowrap">{w}</th>)}
+              <th className="p-1.5 text-center border-b-2 border-amber text-[10px] font-bold whitespace-nowrap">합계</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((r, i) => (
+              <tr key={i} className="border-b border-stone-100">
+                <td className="p-1.5 whitespace-nowrap sticky left-0 bg-white">{r.name}</td>
+                {r.weeks.map((w, j) => (
+                  <td key={j} className={`text-center whitespace-nowrap ${w !== null ? percentColor(w) : 'text-stone-300'}`}>
+                    {w !== null ? `${w}%` : '—'}
+                  </td>
+                ))}
+                <td className="text-center font-bold whitespace-nowrap">{r.total}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="mt-2 text-[10px] text-stone-400">
         🟢 90%+ &nbsp; 🔵 60~89% &nbsp; 🟠 30~59% &nbsp; 🔴 1~29% &nbsp; — 미시작
       </div>
