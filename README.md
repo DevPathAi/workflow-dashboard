@@ -75,7 +75,7 @@ npm run build
 
 ## 데이터 동기화
 
-각 서비스 레포의 `docs/project-management/` 마크다운에서 진행 상황을 수집합니다.
+각 서비스 레포의 `docs/project-management/workflow/WORKFLOW_*.md`(SSoT)에서 진행 상황을 수집합니다. 로컬 재시드는 `DOCS_DIR=<서비스 레포>/docs/project-management npm run sync -- <repo-id>` 형식으로 repo별 실행합니다(과거 `docs/seed/`는 제거됨 — 원본은 각 서비스 레포).
 
 ```bash
 npm run sync:dry   # 변경 미리보기

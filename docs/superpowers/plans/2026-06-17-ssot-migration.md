@@ -150,11 +150,11 @@ gh pr create -R DevPathAi/<$REPO> --base develop --head docs/seed-project-manage
 
 - [ ] **Step 1: 각 repo dry-run 카운트 수집**
 
-각 repo에 대해(절대경로 사용, DOCS_DIR는 서비스 레포의 docs/project-management):
+각 repo에 대해 실행. **주의: `sync.mjs`는 `data/config.json`을 CWD 기준으로 찾으므로 반드시 dashboard 디렉터리에서 실행**(서브셸 `cd` 사용, 루트에서 `node workflow-dashboard/scripts/...`로 돌리면 config 못 찾고 종료):
 ```bash
-DOCS_DIR=D:/workspace/dev-path-ai/devpath-shared/docs/project-management node workflow-dashboard/scripts/sync.mjs devpath-shared --dry-run
+( cd workflow-dashboard && DOCS_DIR=D:/workspace/dev-path-ai/devpath-shared/docs/project-management node scripts/sync.mjs devpath-shared --dry-run )
 ```
-9개 repo 각각 실행(repo-id만 바꿔). 출력의 `📋 Would write: N checks, M done` 값을 기록.
+9개 repo 각각 실행(repo-id·DOCS_DIR 경로만 바꿔). 출력의 `📋 Would write: N checks, M done` 값을 기록.
 
 - [ ] **Step 2: 커밋본과 대조**
 
