@@ -6,19 +6,19 @@ import { isNewFormat, getRepoId } from '../types/config'
 
 // Fallback weeks for legacy configs without periods
 export const WEEKS_META = [
-  { week: 'W1', period: '' },
-  { week: 'W2', period: '' },
-  { week: 'W3', period: '' },
-  { week: 'W4', period: '' },
-  { week: 'W5', period: '' },
+  { week: 'DONE', period: '' },
+  { week: 'MD1', period: '' },
+  { week: 'MD2', period: '' },
+  { week: 'MD3', period: '' },
+  { week: 'MD4', period: '' },
 ]
 
 const LEGACY_WEEKS = [
-  { week: 'W1', period: '' },
-  { week: 'W2', period: '' },
-  { week: 'W3', period: '' },
-  { week: 'W4', period: '' },
-  { week: 'W5', period: '' },
+  { week: 'DONE', period: '' },
+  { week: 'MD1', period: '' },
+  { week: 'MD2', period: '' },
+  { week: 'MD3', period: '' },
+  { week: 'MD4', period: '' },
 ]
 
 const LS_DATA_PREFIX = 'dashboard-data-'

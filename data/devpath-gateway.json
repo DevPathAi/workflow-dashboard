@@ -1,50 +1,79 @@
 {
   "repo": "devpath-gateway",
-  "updatedAt": "2026-06-13T01:35:50.686Z",
+  "updatedAt": "2026-06-16T14:11:11.857Z",
   "tracks": [
     {
       "name": "gateway",
-      "owner": "Backend",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W2",
-          "period": "06-22~06-26",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "API Gateway 엣지",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
+              "phases": [
+                {
+                  "name": "PG·shared 연동",
+                  "total": 2,
+                  "done": 2,
+                  "items": [
+                    {
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
+                    },
+                    {
+                      "text": "postgres service container CI",
+                      "done": true
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 2
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 2
+        },
+        {
+          "week": "MD1",
+          "period": "2026-06-16~2026-07-20",
+          "steps": [
+            {
+              "name": "#1 OAuth/인증 — 엣지",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "API Gateway 엣지",
-                  "total": 3,
+                  "name": "OAuth2 엣지 + JWT 라우팅",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Gateway 라우팅 골격",
-                      "done": false
-                    },
-                    {
-                      "text": "JWT 검증 엣지",
-                      "done": false
-                    },
-                    {
-                      "text": "OAuth2 로그인 연계",
+                      "text": "OAuth2 엣지 + JWT 검증 라우팅",
                       "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 3,
+              "totalChecks": 1,
               "doneChecks": 0
             }
           ],
-          "totalChecks": 3,
+          "totalChecks": 1,
           "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 3,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

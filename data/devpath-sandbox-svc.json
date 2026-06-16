@@ -1,73 +1,65 @@
 {
   "repo": "devpath-sandbox-svc",
-  "updatedAt": "2026-06-13T01:35:50.689Z",
+  "updatedAt": "2026-06-16T14:11:14.115Z",
   "tracks": [
     {
       "name": "sandbox",
-      "owner": "Backend",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W10",
-          "period": "08-17~08-21",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "Sandbox Runner 기반",
-              "status": "Not Started",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
               "phases": [
                 {
-                  "name": "Sandbox Runner 기반",
-                  "total": 4,
-                  "done": 0,
+                  "name": "PG·shared 연동",
+                  "total": 2,
+                  "done": 2,
                   "items": [
                     {
-                      "text": "Docker 컨테이너 풀(Java21/Node20/Python3.12)",
-                      "done": false
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
                     },
                     {
-                      "text": "gVisor(runsc) 런타임",
-                      "done": false
-                    },
-                    {
-                      "text": "리소스 제한(CPU·MEM·30s·네트워크 차단)",
-                      "done": false
-                    },
-                    {
-                      "text": "sandbox_sessions + 실행 로그 SSE",
-                      "done": false
+                      "text": "postgres service container CI",
+                      "done": true
                     }
                   ]
                 }
               ],
-              "totalChecks": 4,
-              "doneChecks": 0
+              "totalChecks": 2,
+              "doneChecks": 2
             }
           ],
-          "totalChecks": 4,
-          "doneChecks": 0
+          "totalChecks": 2,
+          "doneChecks": 2
         },
         {
-          "week": "W11",
-          "period": "08-24~08-28",
+          "week": "MD2",
+          "period": "2026-07-21~2026-08-31",
           "steps": [
             {
-              "name": "제출 처리",
+              "name": "#5 Sandbox",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "제출 처리",
+                  "name": "컨테이너 격리 실행",
                   "total": 3,
                   "done": 0,
                   "items": [
                     {
-                      "text": "테스트 러너 결과 파싱",
+                      "text": "Docker 컨테이너 풀(Java21/Node20/Python3.12) + gVisor(runsc)",
                       "done": false
                     },
                     {
-                      "text": "SandboxRunSubmittedEvent",
+                      "text": "리소스 제한(CPU/MEM/30s/네트워크 차단) + sandbox_sessions",
                       "done": false
                     },
                     {
-                      "text": "힌트 3단계",
+                      "text": "실행 로그 SSE + SandboxRunSubmittedEvent",
                       "done": false
                     }
                   ]
@@ -81,20 +73,20 @@
           "doneChecks": 0
         },
         {
-          "week": "W22",
-          "period": "11-09~11-13",
+          "week": "MD4",
+          "period": "2026-12-01~2026-12-31",
           "steps": [
             {
-              "name": "Sandbox pentest",
+              "name": "#12 보안 — Sandbox",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "Sandbox pentest",
+                  "name": "pentest",
                   "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "격리 탈출 시도 자동 테스트",
+                      "text": "Sandbox pentest(격리 탈출 자동 테스트)",
                       "done": false
                     }
                   ]
@@ -111,6 +103,12 @@
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 6,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

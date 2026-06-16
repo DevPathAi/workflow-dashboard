@@ -26,8 +26,8 @@ export default function Detail() {
   const [selectedStep, setSelectedStep] = useState<Step | null>(null)
   const [selectedTrackIdx, setSelectedTrackIdx] = useState(0)
   const [activeTab, setActiveTab] = useState<'detail' | 'changelog'>('detail')
-  // 작업(totalChecks>0)이 있는 첫 주차를 기본값으로 한다.
-  // 사용자가 주차 탭을 직접 누르면 그 선택(weekOverride)이 우선한다.
+  // 작업(totalChecks>0)이 있는 첫 단계를 기본값으로 한다.
+  // 사용자가 단계 탭을 직접 누르면 그 선택(weekOverride)이 우선한다.
   const defaultWeek = useMemo(() => {
     for (const p of config?.periods || []) {
       if (data?.tracks.some(t => t.weeks.some(w => w.week === p.id && w.totalChecks > 0))) return p.id

@@ -27,7 +27,7 @@
 - `validate:data`가 `data/*.json` 정합성을 검사한다 — 데이터 변경 시 이 검사 통과가 "테스트 통과"다.
 - 데이터 동기화·편집은 `/project-dashboard` 스킬(status·config·edit·sync)을 사용한다.
 - 데이터 계약: [skills/project-dashboard/references/data-schema.md](skills/project-dashboard/references/data-schema.md)
-- 기준: 24주(W1~W24) / 마일스톤 M1~M6.
+- 기준: 단계 DONE·MD1~MD4 (모두의 창업 라운드 정렬). 작업 단위 = 수직 슬라이스 #1~12(repo별 Step).
 
 ## 공통 규칙
 

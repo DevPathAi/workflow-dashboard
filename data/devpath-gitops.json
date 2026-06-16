@@ -1,131 +1,65 @@
 {
   "repo": "devpath-gitops",
-  "updatedAt": "2026-06-13T01:35:50.690Z",
+  "updatedAt": "2026-06-16T14:11:14.786Z",
   "tracks": [
     {
       "name": "team-lead",
-      "owner": "QA/DevOps",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W1",
-          "period": "06-15~06-19",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "CI/CD 파이프라인",
-              "status": "Not Started",
+              "name": "CI/CD 기준선",
+              "status": "Done",
               "phases": [
                 {
-                  "name": "CI/CD 파이프라인",
-                  "total": 1,
-                  "done": 0,
+                  "name": "파이프라인",
+                  "total": 2,
+                  "done": 2,
                   "items": [
                     {
-                      "text": "GitHub Actions CI/CD 구축",
-                      "done": false
+                      "text": "9개 서비스 postgres service container CI + 이미지 빌드·push",
+                      "done": true
+                    },
+                    {
+                      "text": "gitops 배포 job + GitHub App 자동 SHA 갱신(node24 actions)",
+                      "done": true
                     }
                   ]
                 }
               ],
-              "totalChecks": 1,
-              "doneChecks": 0
+              "totalChecks": 2,
+              "doneChecks": 2
             }
           ],
-          "totalChecks": 1,
-          "doneChecks": 0
+          "totalChecks": 2,
+          "doneChecks": 2
         },
         {
-          "week": "W22",
-          "period": "11-09~11-13",
+          "week": "MD4",
+          "period": "2026-12-01~2026-12-31",
           "steps": [
             {
-              "name": "보안 + Chaos",
+              "name": "#12 안정화·릴리즈",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "보안 + Chaos",
+                  "name": "Canary·부하·품질",
                   "total": 3,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Chaos: Claude/CDN/Sandbox 풀 고갈",
+                      "text": "staging→prod Canary(10→50→100%) + 릴리즈 노트",
                       "done": false
                     },
                     {
-                      "text": "OAuth 키 rotation 리허설",
+                      "text": "Chaos(Claude·CDN·Sandbox 풀 고갈) + OWASP ZAP",
                       "done": false
                     },
                     {
-                      "text": "OWASP ZAP 스캔",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W23",
-          "period": "11-16~11-20",
-          "steps": [
-            {
-              "name": "부하 테스트 + QA",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "부하 테스트 + QA",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "k6 시나리오 전체",
-                      "done": false
-                    },
-                    {
-                      "text": "모바일 실기기 회귀(Android·iOS 3종)",
-                      "done": false
-                    },
-                    {
-                      "text": "SonarQube Quality Gate",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W24",
-          "period": "11-23~11-27",
-          "steps": [
-            {
-              "name": "배포",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "배포",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "회귀 테스트 체크리스트",
-                      "done": false
-                    },
-                    {
-                      "text": "staging→prod Canary(10→50→100%)",
-                      "done": false
-                    },
-                    {
-                      "text": "릴리즈 노트 공지",
+                      "text": "k6 부하 시나리오 + SonarQube Quality Gate + 회귀 체크리스트",
                       "done": false
                     }
                   ]
@@ -142,6 +76,12 @@
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 5,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

@@ -5,9 +5,9 @@
 `data/`의 정적 JSON을 읽어 다음을 렌더링합니다.
 
 - 전체 진행률 (모든 트랙 체크 합산)
-- 트랙별 카드 (담당자·주차별 진행률)
-- 주차별 진행 테이블 / 진행 추이 차트
-- 레포 상세 페이지 (PRD / Task / Workflow / Changelog 탭) — 작업이 있는 첫 주차가 기본으로 열림
+- 트랙별 카드 (담당자·단계별 진행률)
+- 단계별 진행 테이블 / 진행 추이 차트
+- 레포 상세 페이지 (PRD / Task / Workflow / Changelog 탭) — 작업이 있는 첫 단계가 기본으로 열림
 
 > 이 레포는 [project-dashboard 스킬](skills/project-dashboard/project-dashboard.md)로 생성·관리됩니다.
 > 데이터 수정/동기화는 `/project-dashboard` 스킬 명령(`status`, `config`, `edit`, `sync`)을 사용하세요.
@@ -45,16 +45,15 @@ npm run build
 
 ## 데이터 구조
 
-프로젝트는 **24주(W1~W24, 2026-06-15 시작) / 마일스톤 6개** 기준입니다.
+프로젝트는 **단계 DONE·MD1~MD4 (모두의 창업 라운드 정렬, 2026-06~12)** 기준이며, 작업 단위는 **수직 슬라이스 #1~12**(repo별 Step)입니다.
 
-| 마일스톤 | 시점 | 완료 기준 |
+| 단계 | 시점 | 완료 기준(끝단간 동작) |
 | --- | --- | --- |
-| M1 가입 플로우 | W4 | GitHub OAuth + 프로필 수집 |
-| M2 1st Aha | W8 | 가입 → 개인화 경로 p50 < 8분 |
-| M3 학습 실행 | W12 | Sandbox + AI 리뷰 작동 |
-| M4 모바일·커뮤니티 | W16 | Flutter 앱 + 게시판 + 프로필 |
-| M5 습관화 | W20 | D7 리텐션 ≥ 25% (staging) |
-| M6 v1.0 | W24 | 회귀 + 부하 + Chaos 전부 통과 |
+| DONE | ~6.16 | W1 인프라 + 프론트 목 프로토(web·admin) 기준선 |
+| MD1 1st Aha | ~7.20 | OAuth → 진단 → 학습경로(Claude) p50 < 8분, web 실동작 |
+| MD2 2nd Aha + 베타 | ~8.31 | 콘텐츠→Sandbox→AI리뷰 + 결제 + 베타 100명 (=8주 MVP) |
+| MD3 풀 골든패스 + 멀티플랫폼 | ~11월 | 멘토·커뮤니티·LCS + 모바일 앱 + 랜딩 배포 |
+| MD4 v1.0 완성도 | 12월 | 회귀·부하·Chaos 통과 + 왕중왕 IR 데모 |
 
 트랙(레포) 목록 — `data/config.json`:
 
@@ -70,13 +69,13 @@ npm run build
 | `devpath-frontend` | frontend |
 | `devpath-gitops` | team-lead |
 
-> 현재 `data/`에는 [17_스케줄](https://github.com/DevPathAi/documents/blob/main/17_스케줄.md) 기반 **W1~W24 작업 약 110개**가 9개 트랙에 시드되어 있습니다. 전부 계획 상태(진행률 0%)이며, 실제 진척은 각 서비스가 작업하며 `sync`로 갱신합니다.
+> 현재 `data/`에는 [17_스케줄](https://github.com/DevPathAi/documents/blob/main/17_스케줄.md) 기반 **DONE 기준선 + MD1~MD4 수직 슬라이스** 작업이 9개 트랙에 시드되어 있습니다. DONE 기준선(W1 인프라·프론트 목 프로토)은 완료(`- [x]`)로 박제, 이후 슬라이스는 계획 상태이며 실제 진척은 각 서비스가 작업하며 `sync`로 갱신합니다.
 
 전체 데이터 계약은 [skills/project-dashboard/references/data-schema.md](skills/project-dashboard/references/data-schema.md) 참고.
 
 ## 데이터 동기화
 
-각 서비스 레포의 `docs/project-management/` 마크다운에서 진행 상황을 수집합니다.
+각 서비스 레포의 `docs/project-management/workflow/WORKFLOW_*.md`(SSoT)에서 진행 상황을 수집합니다. 로컬 재시드는 `DOCS_DIR=<서비스 레포>/docs/project-management npm run sync -- <repo-id>` 형식으로 repo별 실행합니다(과거 `docs/seed/`는 제거됨 — 원본은 각 서비스 레포).
 
 ```bash
 npm run sync:dry   # 변경 미리보기

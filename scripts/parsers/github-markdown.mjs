@@ -133,7 +133,7 @@ function transform(raw, options = {}) {
   // Group workflow files by track and week
   const trackMap = new Map()
   for (const file of raw.workflowFiles) {
-    const match = file.name.match(/^WORKFLOW_(.+)_(W\d+)\.md$/)
+    const match = file.name.match(/^WORKFLOW_(.+)_([A-Za-z0-9]+)\.md$/)
     if (!match) continue
     const [, trackName, week] = match
     if (!trackMap.has(trackName)) trackMap.set(trackName, new Map())
