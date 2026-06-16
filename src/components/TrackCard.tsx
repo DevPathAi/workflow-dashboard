@@ -56,7 +56,7 @@ export default function TrackCard({ repoData, trackName, owner, color }: TrackCa
           style={{ width: `${percent}%` }}
         />
       </div>
-      <div className="flex gap-0.5 mt-2 items-end h-5" title={`주차별 진행률 (${weeklyData.length}주, 좌→우 = W1→)`}>
+      <div className="flex gap-0.5 mt-2 items-end h-5" title={`단계별 진행률 (${weeklyData.length}개 단계, 좌→우 = DONE→MD4)`}>
         {weeklyData.map(w => {
           const wp = w.totalChecks > 0 ? Math.round(w.doneChecks / w.totalChecks * 100) : 0
           return (
