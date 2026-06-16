@@ -1,146 +1,106 @@
 {
   "repo": "devpath-frontend",
-  "updatedAt": "2026-06-13T01:35:50.689Z",
+  "updatedAt": "2026-06-16T14:11:14.449Z",
   "tracks": [
     {
       "name": "frontend",
-      "owner": "Frontend/Mobile",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W4",
-          "period": "07-06~07-10",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "랜딩 페이지",
-              "status": "Not Started",
+              "name": "목 API 프로토타입 기준선",
+              "status": "Done",
               "phases": [
                 {
-                  "name": "랜딩 페이지",
-                  "total": 1,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "랜딩 페이지(히어로 데모 영상)",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 1,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W5",
-          "period": "07-13~07-17",
-          "steps": [
-            {
-              "name": "진단 UI",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "진단 UI",
-                  "total": 1,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "객관식 + 코드 읽기 진단 UI",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 1,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W8",
-          "period": "08-03~08-07",
-          "steps": [
-            {
-              "name": "1st Aha 화면",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "1st Aha 화면",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "학습 경로 시각화 화면",
-                      "done": false
-                    },
-                    {
-                      "text": "단일 CTA 검증",
-                      "done": false
-                    },
-                    {
-                      "text": "Q&A UI",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W9",
-          "period": "08-10~08-14",
-          "steps": [
-            {
-              "name": "콘텐츠 뷰어",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "콘텐츠 뷰어",
+                  "name": "셸·web 골든패스",
                   "total": 2,
+                  "done": 2,
+                  "items": [
+                    {
+                      "text": "React→Flutter 전환, melos 모노레포(dp_core·dp_design + apps/web·admin·mobile)",
+                      "done": true
+                    },
+                    {
+                      "text": "web 골든패스 전체(P4a~f: 셸·인증/온보딩·경로 SSE/콘텐츠·Sandbox·Monaco/AI리뷰·KILL_SWITCH·Quota/멘토 SSE/대시보드·커뮤니티)",
+                      "done": true
+                    }
+                  ]
+                },
+                {
+                  "name": "admin",
+                  "total": 1,
+                  "done": 1,
+                  "items": [
+                    {
+                      "text": "admin 대표 3화면(P5: 운영 대시보드·사용자 관리·신고 처리)",
+                      "done": true
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 3
+            }
+          ],
+          "totalChecks": 3,
+          "doneChecks": 3
+        },
+        {
+          "week": "MD1",
+          "period": "2026-06-16~2026-07-20",
+          "steps": [
+            {
+              "name": "#1 OAuth 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "AuthController",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Markdown + Syntax Highlighting",
-                      "done": false
-                    },
-                    {
-                      "text": "코드 블록 인라인 실행 팝오버",
+                      "text": "web AuthController 목→실API 전환 + 통합테스트",
                       "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 2,
+              "totalChecks": 1,
               "doneChecks": 0
-            }
-          ],
-          "totalChecks": 2,
-          "doneChecks": 0
-        },
-        {
-          "week": "W11",
-          "period": "08-24~08-28",
-          "steps": [
+            },
             {
-              "name": "Monaco 에디터",
+              "name": "#2 진단 실API",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "Monaco 에디터",
+                  "name": "온보딩",
                   "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Web Monaco 에디터 통합",
+                      "text": "온보딩 진단 실API 전환",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            },
+            {
+              "name": "#3 학습경로 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "PathController SSE",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "PathController SSE 목→실API 전환 + 온보딩→PATH 골든 스모크(정상 + 중단→resume)",
                       "done": false
                     }
                   ]
@@ -150,129 +110,62 @@
               "doneChecks": 0
             }
           ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W13",
-          "period": "09-07~09-11",
-          "steps": [
-            {
-              "name": "모바일 앱 기본",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "모바일 앱 기본",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "Flutter 앱 스캐폴드(OAuth2 + JWT)",
-                      "done": false
-                    },
-                    {
-                      "text": "홈 대시보드(스트릭·진척률·다음 과제)",
-                      "done": false
-                    },
-                    {
-                      "text": "딥링크 + FCM 푸시 기반",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
           "totalChecks": 3,
           "doneChecks": 0
         },
         {
-          "week": "W14",
-          "period": "09-14~09-18",
+          "week": "MD2",
+          "period": "2026-07-21~2026-08-31",
           "steps": [
             {
-              "name": "모바일 학습 뷰어",
+              "name": "#4 콘텐츠 실API",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "모바일 학습 뷰어",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "콘텐츠 뷰어(Markdown + 코드)",
-                      "done": false
-                    },
-                    {
-                      "text": "진척도 동기화",
-                      "done": false
-                    },
-                    {
-                      "text": "오프라인 읽기 캐시(drift)",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W16",
-          "period": "09-28~10-02",
-          "steps": [
-            {
-              "name": "프로필 + UX",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "프로필 + UX",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "사용자 프로필 화면(평판·태그평판·배지 슬롯)",
-                      "done": false
-                    },
-                    {
-                      "text": "모바일 퀵 캡처",
-                      "done": false
-                    },
-                    {
-                      "text": "UX 회귀 + 성능 튜닝",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W19",
-          "period": "10-19~10-23",
-          "steps": [
-            {
-              "name": "대시보드 UI",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "대시보드 UI",
+                  "name": "ContentPage",
                   "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "진척·리텐션 대시보드 UI(홈)",
+                      "text": "ContentPage 실API 전환",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            },
+            {
+              "name": "#5 Sandbox 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "RunController",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "RunController 실API 전환(Monaco는 이미 web)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            },
+            {
+              "name": "#6 AI리뷰 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "ReviewPanel",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "ReviewPanel 실API 전환",
                       "done": false
                     }
                   ]
@@ -282,13 +175,111 @@
               "doneChecks": 0
             }
           ],
-          "totalChecks": 1,
+          "totalChecks": 3,
+          "doneChecks": 0
+        },
+        {
+          "week": "MD3",
+          "period": "2026-09-01~2026-11-30",
+          "steps": [
+            {
+              "name": "#7 멘토 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "MentorController",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "MentorController SSE 실API 전환",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            },
+            {
+              "name": "#8 커뮤니티 실API",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "커뮤니티",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "커뮤니티 실API 전환(질문 작성 FAB·답변 스레드·투표 활성)",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            },
+            {
+              "name": "#10 모바일 (P6)",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "apps/mobile",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "apps/mobile 실API 전환(공유 dp_core 재사용) + StatefulShellRoute + drift 캐시(오프라인 읽기)",
+                      "done": false
+                    },
+                    {
+                      "text": "재연결 동기화 + FCM 푸시 + OAuth 콜백 딥링크(devpath://callback) + secure_storage TokenStore",
+                      "done": false
+                    },
+                    {
+                      "text": "홈 대시보드(스트릭·진척률·다음 과제) + 모바일 학습 뷰어 + 퀵 캡처",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            },
+            {
+              "name": "#11 랜딩 (P7)",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "landing",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "landing(Jaspr SSG, standalone) 마케팅 페이지 + 전용 CI job + <html lang=\"ko\"> 주입",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 1,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 6,
           "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 15,
+      "doneChecks": 3
+    }
+  ],
   "changelog": []
 }

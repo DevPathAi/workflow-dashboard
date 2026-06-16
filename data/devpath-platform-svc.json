@@ -1,69 +1,87 @@
 {
   "repo": "devpath-platform-svc",
-  "updatedAt": "2026-06-13T01:35:50.687Z",
+  "updatedAt": "2026-06-16T14:11:12.312Z",
   "tracks": [
     {
       "name": "platform",
-      "owner": "Backend",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W1",
-          "period": "06-15~06-19",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "법적 필수 스키마",
-              "status": "Not Started",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
               "phases": [
                 {
-                  "name": "법적 필수 스키마",
-                  "total": 1,
-                  "done": 0,
+                  "name": "PG·shared 연동",
+                  "total": 2,
+                  "done": 2,
                   "items": [
                     {
-                      "text": "3년 미이용 사용자 분리보관 테이블 + 배치 스케줄러(정보통신망법 §29)",
-                      "done": false
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
+                    },
+                    {
+                      "text": "postgres service container CI",
+                      "done": true
                     }
                   ]
                 }
               ],
-              "totalChecks": 1,
-              "doneChecks": 0
+              "totalChecks": 2,
+              "doneChecks": 2
             }
           ],
-          "totalChecks": 1,
-          "doneChecks": 0
+          "totalChecks": 2,
+          "doneChecks": 2
         },
         {
-          "week": "W2",
-          "period": "06-22~06-26",
+          "week": "MD1",
+          "period": "2026-06-16~2026-07-20",
           "steps": [
             {
-              "name": "OAuth2 인증",
+              "name": "#1 OAuth/인증 (게이트)",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "OAuth2 인증",
-                  "total": 5,
+                  "name": "Spring Security + OAuth2 Client",
+                  "total": 2,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Spring Security 7 + OAuth2 Client",
-                      "done": false
-                    },
-                    {
-                      "text": "GitHub/Google/카카오 Provider",
+                      "text": "Spring Security 7 + OAuth2 Client (GitHub → Google → 카카오 순)",
                       "done": false
                     },
                     {
                       "text": "JWT + Refresh Cookie",
                       "done": false
-                    },
+                    }
+                  ]
+                },
+                {
+                  "name": "이벤트",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
                     {
-                      "text": "users·oauth_identities·profiles 스키마",
+                      "text": "UserRegisteredEvent Outbox",
+                      "done": false
+                    }
+                  ]
+                },
+                {
+                  "name": "외부 의존성(횡단)",
+                  "total": 2,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "카카오/Google OAuth 앱 심사 신청",
                       "done": false
                     },
                     {
-                      "text": "UserRegisteredEvent Outbox",
+                      "text": "Anthropic 프로덕션 한도 신청",
                       "done": false
                     }
                   ]
@@ -77,59 +95,20 @@
           "doneChecks": 0
         },
         {
-          "week": "W3",
-          "period": "06-29~07-03",
+          "week": "MD2",
+          "period": "2026-07-21~2026-08-31",
           "steps": [
             {
-              "name": "GitHub 프로필 수집",
+              "name": "#6 결제",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "GitHub 프로필 수집",
-                  "total": 4,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "GitHub API 클라이언트(사용자 토큰)",
-                      "done": false
-                    },
-                    {
-                      "text": "GithubProfileFetchWorker(비동기)",
-                      "done": false
-                    },
-                    {
-                      "text": "github_profiles·repositories·language_stats",
-                      "done": false
-                    },
-                    {
-                      "text": "Rate Limit + 토큰 암호화(AES-256-GCM)",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 4,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 4,
-          "doneChecks": 0
-        },
-        {
-          "week": "W4",
-          "period": "07-06~07-10",
-          "steps": [
-            {
-              "name": "Admin 기초",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "Admin 기초",
+                  "name": "토스페이먼츠",
                   "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Admin 콘텐츠 CRUD",
+                      "text": "토스페이먼츠 연동(월 14,900원 구독 진입)",
                       "done": false
                     }
                   ]
@@ -143,79 +122,42 @@
           "doneChecks": 0
         },
         {
-          "week": "W19",
-          "period": "10-19~10-23",
+          "week": "MD4",
+          "period": "2026-12-01~2026-12-31",
           "steps": [
             {
-              "name": "진척·리텐션 루프",
+              "name": "#12 보안 — OAuth 키",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "진척·리텐션 루프",
-                  "total": 4,
+                  "name": "키 rotation",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "스트릭 계산(TZ 지원)",
-                      "done": false
-                    },
-                    {
-                      "text": "user_badges 자동 수여",
-                      "done": false
-                    },
-                    {
-                      "text": "주간 리포트 배치(일 19:00)",
-                      "done": false
-                    },
-                    {
-                      "text": "3일 미접속 AI 제안 배치",
+                      "text": "OAuth 키 rotation 리허설",
                       "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 4,
+              "totalChecks": 1,
               "doneChecks": 0
             }
           ],
-          "totalChecks": 4,
-          "doneChecks": 0
-        },
-        {
-          "week": "W20",
-          "period": "10-26~10-30",
-          "steps": [
-            {
-              "name": "알림",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "알림",
-                  "total": 2,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "선호 시간대 푸시 스케줄러",
-                      "done": false
-                    },
-                    {
-                      "text": "FCM 모바일 푸시 + 이메일",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 2,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 2,
+          "totalChecks": 1,
           "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 9,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

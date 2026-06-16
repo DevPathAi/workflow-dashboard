@@ -1,65 +1,184 @@
 {
   "repo": "devpath-ai-svc",
-  "updatedAt": "2026-06-13T01:35:50.688Z",
+  "updatedAt": "2026-06-16T14:11:13.732Z",
   "tracks": [
     {
       "name": "ai",
-      "owner": "AI",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W6",
-          "period": "07-20~07-24",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "Claude 클라이언트",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
+              "phases": [
+                {
+                  "name": "PG·shared 연동",
+                  "total": 2,
+                  "done": 2,
+                  "items": [
+                    {
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
+                    },
+                    {
+                      "text": "postgres service container CI",
+                      "done": true
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 2
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 2
+        },
+        {
+          "week": "MD1",
+          "period": "2026-06-16~2026-07-20",
+          "steps": [
+            {
+              "name": "#3 학습경로 (1st Aha)",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "Claude 클라이언트",
-                  "total": 1,
+                  "name": "Claude 경로 생성",
+                  "total": 3,
                   "done": 0,
                   "items": [
                     {
                       "text": "Claude API 클라이언트(Sonnet 4.6)",
                       "done": false
+                    },
+                    {
+                      "text": "Path 생성 프롬프트 v1(버전 관리) + JSON strict 파싱",
+                      "done": false
+                    },
+                    {
+                      "text": "SSE 스트리밍(4단계) + LearningPathGeneratedEvent",
+                      "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 1,
+              "totalChecks": 3,
               "doneChecks": 0
             }
           ],
-          "totalChecks": 1,
+          "totalChecks": 3,
           "doneChecks": 0
         },
         {
-          "week": "W12",
-          "period": "08-31~09-04",
+          "week": "MD2",
+          "period": "2026-07-21~2026-08-31",
           "steps": [
             {
-              "name": "AI 코드 리뷰 + 시드",
+              "name": "#6 AI 코드리뷰 (2nd Aha)",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "AI 코드 리뷰 + 시드",
-                  "total": 4,
+                  "name": "[법적 필수] 인젝션 방어",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "프롬프트 인젝션 방어(입력 필터 + system 방어 + 탈옥 방지)",
+                      "text": "입력 필터링 + system prompt 방어 + 탈옥 방지(AI 기능 활성화 전 필수)",
+                      "done": false
+                    }
+                  ]
+                },
+                {
+                  "name": "코드 리뷰",
+                  "total": 2,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "Claude 코드 리뷰 프롬프트 + 골든 50 케이스",
                       "done": false
                     },
                     {
-                      "text": "코드 리뷰 프롬프트 + 골든 50 케이스",
+                      "text": "ai_code_reviews 비동기 + 👍👎 피드백",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 3,
+          "doneChecks": 0
+        },
+        {
+          "week": "MD3",
+          "period": "2026-09-01~2026-11-30",
+          "steps": [
+            {
+              "name": "#7 AI 멘토",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "멘토 세션",
+                  "total": 2,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "ai_mentor_sessions + context_snapshot(현재 콘텐츠 + 최근 5 Sandbox 자동 주입)",
                       "done": false
                     },
                     {
-                      "text": "ai_code_reviews 비동기 처리",
+                      "text": "SSE 스트리밍 + 참고자료 링크",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 0
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 0
+        },
+        {
+          "week": "MD4",
+          "period": "2026-12-01~2026-12-31",
+          "steps": [
+            {
+              "name": "#12 FinOps",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "비용·캐시·킬스위치",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "ai_cost_logs + Grafana 대시보드",
                       "done": false
                     },
                     {
-                      "text": "유사 질문 탐지(pgvector 0.80)",
+                      "text": "Semantic Cache(Redis TTL 7일) + 3계층 Kill-switch + 사용량 한도 가드",
+                      "done": false
+                    },
+                    {
+                      "text": "2 Aha 퍼널 대시보드",
+                      "done": false
+                    }
+                  ]
+                },
+                {
+                  "name": "모더레이션",
+                  "total": 1,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "AI 자동 모더레이션 4단계(Haiku)",
                       "done": false
                     }
                   ]
@@ -71,81 +190,17 @@
           ],
           "totalChecks": 4,
           "doneChecks": 0
-        },
-        {
-          "week": "W20",
-          "period": "10-26~10-30",
-          "steps": [
-            {
-              "name": "정체 탐지",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "정체 탐지",
-                  "total": 1,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "정체 탐지 AI(Claude 난이도 재조정 제안)",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 1,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W21",
-          "period": "11-02~11-06",
-          "steps": [
-            {
-              "name": "FinOps",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "FinOps",
-                  "total": 5,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "ai_cost_logs + Grafana 대시보드",
-                      "done": false
-                    },
-                    {
-                      "text": "Semantic Cache(Redis TTL 7일)",
-                      "done": false
-                    },
-                    {
-                      "text": "3계층 Kill-switch",
-                      "done": false
-                    },
-                    {
-                      "text": "사용량 한도 가드",
-                      "done": false
-                    },
-                    {
-                      "text": "2 Aha 퍼널 대시보드",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 5,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 5,
-          "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 14,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }
