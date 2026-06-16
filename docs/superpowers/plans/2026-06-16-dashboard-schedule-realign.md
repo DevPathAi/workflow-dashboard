@@ -110,8 +110,8 @@ Expected: PASS — `github-markdown parser: all assertions checked` + `period id
 
 - [ ] **Step 6: node:test 회귀 확인**
 
-Run: `node --test scripts/parsers/__fixtures__/`
-Expected: PASS (parse-workflow-md·done-guard·change-types 영향 없음).
+Run: `node --test scripts/parsers/__fixtures__/change-types.test.mjs scripts/parsers/__fixtures__/done-guard.test.mjs scripts/parsers/__fixtures__/parse-workflow-md.test.mjs`
+Expected: PASS — `tests 14 / pass 14 / fail 0` (parse-workflow-md·done-guard·change-types 영향 없음). 주의: `node --test <디렉터리>`는 이 Node 버전에서 디렉터리를 모듈 로드하려다 false-fail나므로 `.test.mjs` 파일을 명시 지정한다.
 
 - [ ] **Step 7: 커밋**
 
@@ -573,7 +573,7 @@ git commit -m "docs: 대시보드 기준 문구 W1~W24/M1~M6 → DONE·MD1~MD4"
 
 Run:
 ```bash
-node scripts/parsers/__fixtures__/test-parsers.mjs && node --test scripts/parsers/__fixtures__/ && npm run lint && npm run validate:data && npm run build
+node scripts/parsers/__fixtures__/test-parsers.mjs && node --test scripts/parsers/__fixtures__/change-types.test.mjs scripts/parsers/__fixtures__/done-guard.test.mjs scripts/parsers/__fixtures__/parse-workflow-md.test.mjs && npm run lint && npm run validate:data && npm run build
 ```
 Expected: 전부 PASS (파서 테스트·node:test·lint·validate:data·build).
 
