@@ -1,73 +1,72 @@
 {
   "repo": "devpath-learning-svc",
-  "updatedAt": "2026-06-13T01:35:50.687Z",
+  "updatedAt": "2026-06-16T14:11:12.773Z",
   "tracks": [
     {
       "name": "learning",
-      "owner": "Backend",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W5",
-          "period": "07-13~07-17",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "진단 테스트",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
+              "phases": [
+                {
+                  "name": "PG·shared 연동",
+                  "total": 2,
+                  "done": 2,
+                  "items": [
+                    {
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
+                    },
+                    {
+                      "text": "postgres service container CI",
+                      "done": true
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 2,
+              "doneChecks": 2
+            }
+          ],
+          "totalChecks": 2,
+          "doneChecks": 2
+        },
+        {
+          "week": "MD1",
+          "period": "2026-06-16~2026-07-20",
+          "steps": [
+            {
+              "name": "#2 진단",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "진단 테스트",
-                  "total": 4,
+                  "name": "진단 스키마·알고리즘",
+                  "total": 2,
                   "done": 0,
                   "items": [
                     {
-                      "text": "question_bank + Bloom 태깅",
+                      "text": "question_bank + Bloom 태깅 스키마",
                       "done": false
                     },
                     {
                       "text": "적응형 진단 알고리즘(난이도 ±)",
                       "done": false
-                    },
-                    {
-                      "text": "비회원 진단 세션(Redis 30분)",
-                      "done": false
-                    },
-                    {
-                      "text": "결과 → 회원 이관 플로우",
-                      "done": false
                     }
                   ]
-                }
-              ],
-              "totalChecks": 4,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 4,
-          "doneChecks": 0
-        },
-        {
-          "week": "W6",
-          "period": "07-20~07-24",
-          "steps": [
-            {
-              "name": "Learning Path Engine",
-              "status": "Not Started",
-              "phases": [
+                },
                 {
-                  "name": "Learning Path Engine",
-                  "total": 3,
+                  "name": "비회원 세션",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "Path 생성 프롬프트 v1 + 버전 관리",
-                      "done": false
-                    },
-                    {
-                      "text": "JSON strict 응답 파싱",
-                      "done": false
-                    },
-                    {
-                      "text": "LearningPathGeneratedEvent",
+                      "text": "비회원 진단 세션(Redis 30분) + 결과 회원 이관",
                       "done": false
                     }
                   ]
@@ -75,69 +74,22 @@
               ],
               "totalChecks": 3,
               "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W7",
-          "period": "07-27~07-31",
-          "steps": [
+            },
             {
-              "name": "pgvector 매칭",
+              "name": "#3 학습경로 (1st Aha)",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "pgvector 매칭",
-                  "total": 4,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "콘텐츠 임베딩 파이프라인(text-embedding-3-small)",
-                      "done": false
-                    },
-                    {
-                      "text": "HNSW 인덱스",
-                      "done": false
-                    },
-                    {
-                      "text": "target_skills → 콘텐츠 매칭 로직",
-                      "done": false
-                    },
-                    {
-                      "text": "path_milestones + path_weekly_tasks",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 4,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 4,
-          "doneChecks": 0
-        },
-        {
-          "week": "W8",
-          "period": "08-03~08-07",
-          "steps": [
-            {
-              "name": "1st Aha 백엔드",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "1st Aha 백엔드",
+                  "name": "임베딩·경로",
                   "total": 2,
                   "done": 0,
                   "items": [
                     {
-                      "text": "SSE 진행 스트리밍(4단계)",
+                      "text": "콘텐츠 임베딩(text-embedding-3-small) + HNSW 인덱스",
                       "done": false
                     },
                     {
-                      "text": "\"왜 이 순서인가\" rationale",
+                      "text": "milestone.target_skills 매칭 + path_milestones·path_weekly_tasks",
                       "done": false
                     }
                   ]
@@ -147,24 +99,24 @@
               "doneChecks": 0
             }
           ],
-          "totalChecks": 2,
+          "totalChecks": 5,
           "doneChecks": 0
         },
         {
-          "week": "W9",
-          "period": "08-10~08-14",
+          "week": "MD2",
+          "period": "2026-07-21~2026-08-31",
           "steps": [
             {
-              "name": "콘텐츠 진척",
+              "name": "#4 콘텐츠",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "콘텐츠 진척",
+                  "name": "콘텐츠 API",
                   "total": 2,
                   "done": 0,
                   "items": [
                     {
-                      "text": "진척 자동 추적(스크롤 + 체류)",
+                      "text": "content 뷰어 API(Markdown) + 진척 자동 추적(스크롤·체류)",
                       "done": false
                     },
                     {
@@ -182,48 +134,42 @@
           "doneChecks": 0
         },
         {
-          "week": "W17",
-          "period": "10-05~10-09",
+          "week": "MD3",
+          "period": "2026-09-01~2026-11-30",
           "steps": [
             {
-              "name": "AI 멘토",
+              "name": "#9 LCS — 학습활동",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "AI 멘토",
-                  "total": 4,
+                  "name": "학습활동 스트림",
+                  "total": 1,
                   "done": 0,
                   "items": [
                     {
-                      "text": "ai_mentor_sessions + context_snapshot",
-                      "done": false
-                    },
-                    {
-                      "text": "현재 콘텐츠 + 최근 5 Sandbox 자동 주입",
-                      "done": false
-                    },
-                    {
-                      "text": "SSE 스트리밍",
-                      "done": false
-                    },
-                    {
-                      "text": "참고 자료 링크",
+                      "text": "Kafka 학습활동 스트림 + Redis 스냅샷(TTL 7일) 학습측 연동",
                       "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 4,
+              "totalChecks": 1,
               "doneChecks": 0
             }
           ],
-          "totalChecks": 4,
+          "totalChecks": 1,
           "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 10,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

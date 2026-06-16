@@ -1,119 +1,119 @@
 {
   "repo": "devpath-community-svc",
-  "updatedAt": "2026-06-13T01:35:50.688Z",
+  "updatedAt": "2026-06-16T14:11:13.302Z",
   "tracks": [
     {
       "name": "community",
-      "owner": "Backend",
+      "owner": "unknown",
       "weeks": [
         {
-          "week": "W4",
-          "period": "07-06~07-10",
+          "week": "DONE",
+          "period": "2026-06-01~2026-06-16",
           "steps": [
             {
-              "name": "커뮤니티 스키마",
-              "status": "Not Started",
+              "name": "W1 백엔드 기준선",
+              "status": "Done",
               "phases": [
                 {
-                  "name": "커뮤니티 스키마",
-                  "total": 1,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "Flyway: posts·questions·answers·comments·votes·tags·reputation·badges·reports·snapshots",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 1,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W8",
-          "period": "08-03~08-07",
-          "steps": [
-            {
-              "name": "Q&A 기본",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "Q&A 기본",
+                  "name": "PG·shared 연동",
                   "total": 2,
-                  "done": 0,
+                  "done": 2,
                   "items": [
                     {
-                      "text": "Q&A CRUD + 목록/상세/작성/답변/채택",
-                      "done": false
+                      "text": "PG 드라이버 + shared 의존 + DB 연결 테스트",
+                      "done": true
                     },
                     {
-                      "text": "태그 자동완성 + Elasticsearch posts 인덱스",
-                      "done": false
+                      "text": "postgres service container CI",
+                      "done": true
                     }
                   ]
                 }
               ],
               "totalChecks": 2,
-              "doneChecks": 0
+              "doneChecks": 2
             }
           ],
           "totalChecks": 2,
-          "doneChecks": 0
+          "doneChecks": 2
         },
         {
-          "week": "W12",
-          "period": "08-31~09-04",
+          "week": "MD3",
+          "period": "2026-09-01~2026-11-30",
           "steps": [
             {
-              "name": "AI 시드 답변",
+              "name": "#8 커뮤니티 Q&A",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "AI 시드 답변",
-                  "total": 1,
+                  "name": "Q&A",
+                  "total": 3,
                   "done": 0,
                   "items": [
                     {
-                      "text": "AI Seed Answer Worker(community_ai_answers)",
+                      "text": "Q&A CRUD(목록/상세/작성/답변/채택) + 태그 자동완성 + ES 검색 인덱스",
+                      "done": false
+                    },
+                    {
+                      "text": "AI 시드 답변 Worker(질문 즉시 Claude→community_ai_answers) + 유사 질문 탐지(pgvector 0.80)",
+                      "done": false
+                    },
+                    {
+                      "text": "자유게시판 + 프로젝트 공유 게시판",
                       "done": false
                     }
                   ]
                 }
               ],
-              "totalChecks": 1,
+              "totalChecks": 3,
               "doneChecks": 0
-            }
-          ],
-          "totalChecks": 1,
-          "doneChecks": 0
-        },
-        {
-          "week": "W15",
-          "period": "09-21~09-25",
-          "steps": [
+            },
             {
-              "name": "자유/프로젝트 게시판",
+              "name": "#9 LCS (moat)",
               "status": "Not Started",
               "phases": [
                 {
-                  "name": "자유/프로젝트 게시판",
+                  "name": "스냅샷·Sanitize",
                   "total": 3,
                   "done": 0,
                   "items": [
                     {
-                      "text": "자유게시판 CRUD + 카테고리 6종 + 댓글·좋아요",
+                      "text": "learning_context_snapshots 자동 수집(질문 작성 시 Opt-in 토글)",
                       "done": false
                     },
                     {
-                      "text": "프로젝트 공유 + GitHub URL + 스타",
+                      "text": "에러 로그 민감정보 3단계 Sanitize 파이프라인(API 키·이메일·토큰 마스킹)",
                       "done": false
                     },
                     {
-                      "text": "커뮤니티 검색(Elasticsearch)",
+                      "text": "답변자 UI 맥락 패널(학습 경로·현재 콘텐츠·최근 에러) + 개별 on/off·미리보기·공개범위",
+                      "done": false
+                    }
+                  ]
+                }
+              ],
+              "totalChecks": 3,
+              "doneChecks": 0
+            },
+            {
+              "name": "평판 기초",
+              "status": "Not Started",
+              "phases": [
+                {
+                  "name": "평판·스트릭",
+                  "total": 3,
+                  "done": 0,
+                  "items": [
+                    {
+                      "text": "평판 엔진(upvote/downvote/채택) + 태그별 평판(user_tag_reputation)",
+                      "done": false
+                    },
+                    {
+                      "text": "레벨별 권한(15/125/500/1000) + Bronze 배지 9종 + 일일 +40 상한·sockpuppet 탐지",
+                      "done": false
+                    },
+                    {
+                      "text": "스트릭(TZ)·주간 리포트 배치·3일 미접속 AI 제안·선호 시간대 푸시",
                       "done": false
                     }
                   ]
@@ -123,161 +123,19 @@
               "doneChecks": 0
             }
           ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W17",
-          "period": "10-05~10-09",
-          "steps": [
-            {
-              "name": "학습 맥락 연결",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "학습 맥락 연결",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "learning_context_snapshots 자동 수집(Opt-in)",
-                      "done": false
-                    },
-                    {
-                      "text": "답변자 UI 맥락 패널",
-                      "done": false
-                    },
-                    {
-                      "text": "맥락 개별 on/off + 공개 범위",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W18",
-          "period": "10-12~10-16",
-          "steps": [
-            {
-              "name": "평판 + 배지",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "평판 + 배지",
-                  "total": 6,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "평판 엔진(투표/채택 집계)",
-                      "done": false
-                    },
-                    {
-                      "text": "태그별 평판(user_tag_reputation)",
-                      "done": false
-                    },
-                    {
-                      "text": "권한 언락(15/125/500/1000)",
-                      "done": false
-                    },
-                    {
-                      "text": "Bronze 배지 9종 자동 수여",
-                      "done": false
-                    },
-                    {
-                      "text": "sockpuppet 탐지",
-                      "done": false
-                    },
-                    {
-                      "text": "피어 매칭",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 6,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 6,
-          "doneChecks": 0
-        },
-        {
-          "week": "W22",
-          "period": "11-09~11-13",
-          "steps": [
-            {
-              "name": "모더레이션",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "모더레이션",
-                  "total": 3,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "AI 모더레이션 4단계(Haiku + 규칙)",
-                      "done": false
-                    },
-                    {
-                      "text": "신고 6 카테고리 + Admin 큐",
-                      "done": false
-                    },
-                    {
-                      "text": "제재 체계(경고/7일/30일/영구) + 이의제기",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 3,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 3,
-          "doneChecks": 0
-        },
-        {
-          "week": "W24",
-          "period": "11-23~11-27",
-          "steps": [
-            {
-              "name": "Founding 활성화",
-              "status": "Not Started",
-              "phases": [
-                {
-                  "name": "Founding 활성화",
-                  "total": 2,
-                  "done": 0,
-                  "items": [
-                    {
-                      "text": "Founding Contributors 50명 활성화 + 평판 500 + 영구 배지",
-                      "done": false
-                    },
-                    {
-                      "text": "미답변 질문 자동 승격(24h)",
-                      "done": false
-                    }
-                  ]
-                }
-              ],
-              "totalChecks": 2,
-              "doneChecks": 0
-            }
-          ],
-          "totalChecks": 2,
+          "totalChecks": 9,
           "doneChecks": 0
         }
       ]
     }
   ],
   "prd": [],
-  "history": [],
+  "history": [
+    {
+      "date": "2026-06-16",
+      "totalChecks": 11,
+      "doneChecks": 2
+    }
+  ],
   "changelog": []
 }

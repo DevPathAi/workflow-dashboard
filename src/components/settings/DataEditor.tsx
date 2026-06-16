@@ -82,7 +82,7 @@ export default function DataEditor({ config }: Props) {
   const track = repoData.tracks[0]
   if (!track) return <div className="text-stone-400">트랙 없음</div>
   const week = track.weeks.find(w => w.week === selectedWeek)
-  if (!week) return <div className="text-stone-400">주차 데이터 없음</div>
+  if (!week) return <div className="text-stone-400">단계 데이터 없음</div>
 
   const toggleCheck = (stepIdx: number, phaseIdx: number, itemIdx: number) => {
     const updated = structuredClone(repoData)
@@ -140,7 +140,7 @@ export default function DataEditor({ config }: Props) {
           </select>
         </div>
         <div>
-          <label className="text-xs font-semibold text-stone-700 block mb-1">주차</label>
+          <label className="text-xs font-semibold text-stone-700 block mb-1">단계</label>
           <div className="flex gap-1">
             {WEEKS.map(w => (
               <button key={w} onClick={() => setSelectedWeek(w)}

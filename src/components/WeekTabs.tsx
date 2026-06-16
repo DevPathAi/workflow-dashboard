@@ -7,7 +7,7 @@ interface Props {
 
 export default function WeekTabs({ selected, onChange }: Props) {
   const { config } = useConfig()
-  const weeks = config?.periods?.map(p => p.id) || ['W1', 'W2', 'W3', 'W4', 'W5']
+  const weeks = config?.periods?.map(p => p.id) || ['DONE', 'MD1', 'MD2', 'MD3', 'MD4']
 
   return (
     <div className="flex bg-stone-800 px-6 overflow-x-auto">

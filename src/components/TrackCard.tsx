@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import type { RepoData } from '../types'
 import { progressBorder, progressText, progressBg } from '../utils/progressColor'
+import { useConfig } from '../hooks/useConfig'
 
 interface TrackCardProps {
   repoData: RepoData
@@ -11,6 +12,7 @@ interface TrackCardProps {
 
 export default function TrackCard({ repoData, trackName, owner, color }: TrackCardProps) {
   const navigate = useNavigate()
+  const { config } = useConfig()
   const track = repoData.tracks.find(t => t.name === trackName)
   const isCombined = !track && repoData.tracks.length > 0
 
@@ -24,8 +26,8 @@ export default function TrackCard({ repoData, trackName, owner, color }: TrackCa
     : track!.weeks.reduce((s, w) => s + w.doneChecks, 0)
   const percent = totalChecks > 0 ? Math.round(doneChecks / totalChecks * 100) : 0
 
-  // For combined sparkline, merge weekly totals across all tracks
-  const WEEKS = ['W1', 'W2', 'W3', 'W4', 'W5']
+  // For combined sparkline, merge per-period totals across all tracks
+  const WEEKS = config?.periods?.map(p => p.id) || ['DONE', 'MD1', 'MD2', 'MD3', 'MD4']
   const weeklyData = isCombined
     ? WEEKS.map(w => {
         const tc = repoData.tracks.reduce((s, t) => s + (t.weeks.find(wk => wk.week === w)?.totalChecks || 0), 0)
@@ -56,7 +58,7 @@ export default function TrackCard({ repoData, trackName, owner, color }: TrackCa
           style={{ width: `${percent}%` }}
         />
       </div>
-      <div className="flex gap-0.5 mt-2 items-end h-5" title={`주차별 진행률 (${weeklyData.length}주, 좌→우 = W1→)`}>
+      <div className="flex gap-0.5 mt-2 items-end h-5" title={`단계별 진행률 (${weeklyData.length}개 단계, 좌→우 = DONE→MD4)`}>
         {weeklyData.map(w => {
           const wp = w.totalChecks > 0 ? Math.round(w.doneChecks / w.totalChecks * 100) : 0
           return (

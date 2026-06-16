@@ -32,7 +32,7 @@ export default function ProgressTable({ data }: Props) {
 
   return (
     <div className="bg-white rounded-xl p-4 shadow-sm">
-      <h3 className="text-sm font-semibold text-stone-600 mb-2">주차별 상세</h3>
+      <h3 className="text-sm font-semibold text-stone-600 mb-2">단계별 상세</h3>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[680px] text-xs">
           <thead>

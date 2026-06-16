@@ -66,7 +66,7 @@ export default function TimelineChart({ data }: Props) {
         <div className="h-[250px] flex items-center justify-center text-center px-4">
           <p className="text-sm text-stone-500">
             아직 진척 데이터가 없습니다.<br />
-            작업이 진행되면 주차별 추이가 여기에 표시됩니다.
+            작업이 진행되면 단계별 추이가 여기에 표시됩니다.
           </p>
         </div>
       </div>

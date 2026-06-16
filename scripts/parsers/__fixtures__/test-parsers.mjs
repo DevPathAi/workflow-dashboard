@@ -78,8 +78,30 @@ async function testGitHubMarkdown() {
   console.log('✅ github-markdown parser: all assertions checked')
 }
 
+async function testPeriodIdFormats() {
+  console.log('Testing period id formats (MD/DONE)...')
+  const { default: parser } = await import('../github-markdown.mjs')
+  const inputDir = join(__dirname, 'github-markdown', 'input')
+
+  const raw = {
+    workflowFiles: [
+      { name: 'WORKFLOW_testtrack_MD1.md', path: join(inputDir, 'WORKFLOW_testtrack_MD1.md') },
+      { name: 'WORKFLOW_testtrack_DONE.md', path: join(inputDir, 'WORKFLOW_testtrack_W1.md') },
+    ],
+    prdFiles: [],
+    taskFiles: [],
+  }
+  const result = parser.transform(raw)
+  assert(result.tracks.length === 1, `track count: got ${result.tracks.length}, expected 1`)
+  const weeks = result.tracks[0].weeks.map(w => w.week).sort()
+  assert(weeks.includes('MD1'), `should parse MD1 period, got weeks=${JSON.stringify(weeks)}`)
+  assert(weeks.includes('DONE'), `should parse DONE period, got weeks=${JSON.stringify(weeks)}`)
+  console.log('✅ period id formats: all assertions checked')
+}
+
 console.log('Running parser tests...\n')
 await testGitHubMarkdown()
+await testPeriodIdFormats()
 
 console.log(`\nResults: ${passed} passed, ${failed} failed`)
 if (failed > 0) process.exit(1)
