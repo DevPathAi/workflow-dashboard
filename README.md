@@ -1,6 +1,6 @@
-# DevPath AI — Workflow Dashboard
+# 레바(Leva) — Workflow Dashboard
 
-**DevPath AI** 팀의 워크플로우 진행 현황 대시보드입니다. GitHub Pages로 배포됩니다.
+**레바** 팀의 워크플로우 진행 현황 대시보드입니다. GitHub Pages로 배포됩니다.
 
 `data/`의 정적 JSON을 읽어 다음을 렌더링합니다.
 
